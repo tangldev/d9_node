@@ -118,7 +118,7 @@ pub const VERSION: RuntimeVersion = RuntimeVersion {
 	//   `spec_version`, and `authoring_version` are the same between Wasm and native.
 	// This value is set to 100 to notify Polkadot-JS App (https://polkadot.js.org/apps) to use
 	//   the compatible custom types.
-	spec_version: 116,
+	spec_version: 118,
 	impl_version: 1,
 	apis: RUNTIME_API_VERSIONS,
 	transaction_version: 1,
@@ -601,6 +601,7 @@ impl ChainExtension<Runtime> for D9ChainExtension {
 				let user_vote_ratio_bytes = user_vote_ratio.encode();
 				let _ = env.write(&user_vote_ratio_bytes, false, None);
 			},
+
 			8 => {
 				let current_validators = pallet_session::Pallet::<Runtime>::validators();
 				let current_validators_bytes = current_validators.encode();

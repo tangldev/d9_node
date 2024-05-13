@@ -64,7 +64,7 @@ pub const MAX_ON_CHAIN_ELECTABLE_TARGETS: u32 = 200;
 /// max N of voters
 pub const MAX_ON_CHAIN_ELECTING_VOTERS: u32 = 1000;
 /// Number of blocks constituting a session.
-pub const SESSION_PERIOD: BlockNumber = 1 * DAY;
+pub const SESSION_PERIOD: BlockNumber = 1 * MINUTE;
 /// Offset time before starting the next session.
 pub const SESSION_OFFSET: BlockNumber = 1 * MINUTE;
 /// wait time in era duration until a slash is executed
@@ -119,3 +119,4 @@ pub const DEFAULT_DEPOSIT_LIMIT: Balance = 3 * D9_TOKEN;
 pub const MAX_CODE_SIZE: u32 = 500 * 1024;
 pub const MAX_STORAGE_KEY_LENGTH: u32 = 128;
 pub const MAX_DEBUG_BUFFER_LENGTH: u32 = 2 * 1024 * 1024;
+ 
